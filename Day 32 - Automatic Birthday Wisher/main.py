@@ -24,7 +24,6 @@ for person in data_dict:
                 send_string += f"{new_line}"
             else:
                 send_string += f"{line}"
-        print(send_string)
         with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
             connection.starttls()
             connection.login(MY_EMAIL,APP_PASS)
